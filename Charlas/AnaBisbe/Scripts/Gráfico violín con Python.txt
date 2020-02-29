@@ -1,0 +1,17 @@
+# AsturiasNetConf 
+# Gijón Feb20
+
+# Gráfico violín con Python
+
+# Crear un dataframe y quitar los duplicados
+# dataset = pandas.DataFrame(Educación, Ingresos, Ocupación)
+# dataset = dataset.drop_duplicates()
+
+# Código personalizado:
+# library &amp; dataset
+import seaborn as sns
+import matplotlib.pyplot as plt
+ 
+# Grouped violinplot
+sns.violinplot(x="Ocupación", y="Ingresos", hue="Educación", data=dataset, palette="Pastel1")
+plt.show()

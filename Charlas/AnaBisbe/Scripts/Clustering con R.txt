@@ -1,0 +1,12 @@
+# AsturiasNetConf 
+# Gijón Feb20
+# Transformación para un dataset ya cargado
+
+# 'dataset' holds the input data for this script
+
+ClientesCL.clean <- na.omit(dataset) # listwise deletion of missing
+ClientesCL.scaled <- scale(ClientesCL.clean[8:14]) # standardize variables
+set.seed(80) 
+ClientesCL.km <-kmeans(ClientesCL.scaled, centers = 5) #K-means for clustering
+ClientesCL.cl<- ClientesCL.km$cluster
+ClientesCL<-cbind(ClientesCL.clean,cluster = ClientesCL.km$cluster)

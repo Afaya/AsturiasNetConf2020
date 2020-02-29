@@ -1,0 +1,1 @@
+Presentación: https://www.researchgate.net/publication/338584100_Caracteristicas_Fantasticas_y_Donde_Encontrarlas_La_Pythonizacion_del_C

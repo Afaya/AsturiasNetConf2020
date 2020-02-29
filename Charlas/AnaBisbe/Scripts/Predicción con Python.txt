@@ -1,0 +1,30 @@
+# AsturiasNetConf 
+# Gijón Feb20
+
+# Crear una predicción con Naïve Bayes
+
+# Importar paquetes Python
+import pandas as pd
+import numpy as np
+from sklearn.naive_bayes import GaussianNB
+
+gnb = GaussianNB()
+
+# En este ejemplo se utilizan variables numéricas.
+
+used_features = ["Coches","Hijos en casa","Hijos","Casa","Edad","Ingresos"]
+
+gnb.fit(dataset[used_features].values, dataset["Comprador"])
+
+pred1 = gnb.predict([[1,1,1, 1, 50,40000]]) #SI
+pred2 = gnb.predict([[0,2,3, 1, 45,170000]])#SI
+pred3 = gnb.predict([[3,0,0, 1, 70,70000]]) #NO
+pred4 = gnb.predict([[2,0,3, 1, 80,40000]]) #NO
+pred5 = gnb.predict([[1,0,0, 0, 30,20000]]) #SI
+
+pred = pd.DataFrame()
+pred["p1"] = pred1
+pred["p2"] = pred2
+pred["p3"] = pred3
+pred["p4"] = pred4
+pred["p5"] = pred5

@@ -1,0 +1,10 @@
+# AsturiasNetConf 
+# Gijón Feb20
+
+# Ruth Pozuelo - Curbal: https://www.youtube.com/watch?v=0RH1PMLL7AQ
+
+library(maps)
+#Muestra el mapa de España
+map("world","spain",col='#456A76', bg='#374649')
+#Mapa oscuro con punticos amarillos
+points(dataset$Longitud,dataset$Latitud,col='#F2C80F',cex=0.1)

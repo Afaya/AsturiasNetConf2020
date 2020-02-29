@@ -1,0 +1,15 @@
+# AsturiasNetConf 
+# Gijón Feb20
+
+# Unzip desde Python
+
+import zipfile as zp 
+import pandas as pd
+
+filename = r'C:\AsturiasNetConf Feb20\Orígenes\Clientes DM.zip'
+
+with zp.ZipFile(filename) as z:
+    with z.open ("Clientes DM.csv") as f:
+        source = pd.read_csv(f)
+
+
